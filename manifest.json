@@ -1,0 +1,9 @@
+{
+	"name": "EasierDroneUpgrade",
+	"version_number": "1.0.0",
+	"website_url": "https://github.com/SmoothSpatula/EasierDroneUpgrade",
+	"description": "You only need 2 drones to upgrade (instead of 3)",
+	"dependencies": [
+		"ReturnOfModding-ReturnOfModding-1.0.32"
+	]
+}
