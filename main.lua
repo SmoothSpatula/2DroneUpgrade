@@ -21,7 +21,7 @@ function get_upgradable_drones(player)
 end
 
 gm.pre_script_hook(gm.constants.interactable_pay_cost, function(self, other, result, args)
-    if args[1].value == 5.0 and args[2].value == 2.0 then -- DroneUpgrader
+    if args[1].value == 5.0 and args[2].value == 2.0 and other.m_id <= 2.0 then -- DroneUpgrader only activates for host
         local drone1, drone2 = get_upgradable_drones(other) -- find the first 2 drones
         local drone3 = gm.instance_create_depth(other.x, other.y,0, drone1.object_index) -- create a 3rd drone so that __rpc_drone_upgrade_implementation__ gets called (3rd drone will get sacrificed)
     end
