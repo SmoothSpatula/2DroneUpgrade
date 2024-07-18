@@ -1,6 +1,7 @@
 -- EasierDroneUpgrade v1.0.0
 -- SmoothSpatula
 
+log.info("Successfully loaded ".._ENV["!guid"]..".")
 -- Change golem drones to only drop 2 revivable drones instead of 3 in RevivableDroneGolem mod
 mods.on_all_mods_loaded(function() for k, v in pairs(mods) do if type(v) == "table" and v.gold_drones_golem_spawn then v.gold_drones_golem_spawn = 2 end end end)
 
